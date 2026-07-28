@@ -3,87 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - مدير أيبيهات الشبكات</title>
+    <title>سياسة الخصوصية | Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-light: #e8f0fe;
+            --secondary: #5f6368;
+            --dark: #202124;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --border: #dadce0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+            padding: 40px 20px;
         }
+
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            overflow: hidden;
         }
+
+        .tabs {
+            display: flex;
+            background: #f1f3f4;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            background: var(--white);
+            border-top: 3px solid var(--primary);
+        }
+
+        .content {
+            padding: 40px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
         h1 {
-            color: #0056b3;
-            text-align: center;
-        }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            padding-right: 20px;
-        }
-        li {
+            font-size: 28px;
+            color: var(--primary);
             margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .last-update {
+            font-size: 14px;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p, li {
+            font-size: 16px;
+            color: #3c4043;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: -1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px 10px;
+            }
+            .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>سياسة الخصوصية لتطبيق "مدير أيبيهات الشبكات"</h1>
-        <p><strong>تاريخ آخر تحديث:</strong> 24 يوليو 2026</p>
-        
-        <p>نحن نقدر خصوصيتك، ونسعى جاهدين لحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه كيف نقوم بجمع واستخدام وحماية المعلومات عند استخدامك لتطبيق "مدير أيبيهات الشبكات" (Network IP Manager).</p>
-        
-        <h2>1. جمع البيانات واستخدامها</h2>
-        <p><strong>البيانات المحلية:</strong><br>
-        التطبيق مصمم ليكون أداة لإدارة شبكتك المحلية. جميع البيانات التي تقوم بإدخالها أو يكتشفها التطبيق (مثل عناوين IP، أسماء الأجهزة، الملاحظات، أو كلمات المرور إن وجدت) يتم حفظها <strong>محلياً على قاعدة بيانات جهازك فقط</strong>. نحن لا نقوم بجمع هذه البيانات ولا نرسلها إلى أي خوادم خارجية.</p>
-        
-        <p><strong>الأذونات المطلوبة:</strong><br>
-        يطلب التطبيق بعض الأذونات لكي يعمل بشكل صحيح:</p>
-        <ul>
-            <li><strong>الإنترنت (INTERNET):</strong> مطلوب لعرض الإعلانات ولعمل خدمات التحليل (مثل فايربيز).</li>
-            <li><strong>حالة الشبكة والواي فاي (ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE):</strong> مطلوب لفحص الشبكة واكتشاف الأجهزة المتصلة بها.</li>
-            <li><strong>البصمة/القياسات الحيوية (USE_BIOMETRIC):</strong> مطلوب فقط إذا قمت بتفعيل قفل التطبيق لحماية بياناتك محلياً.</li>
-        </ul>
 
-        <h2>2. خدمات الأطراف الثالثة</h2>
-        <p>يستخدم التطبيق بعض خدمات الأطراف الثالثة التي قد تقوم بجمع معلومات تستخدم لتحديد هويتك (مثل معرفات الأجهزة الإعلانية). هذه الخدمات لا تجمع اسمك أو رقم هاتفك. فيما يلي روابط لسياسات الخصوصية لمقدمي خدمات الأطراف الثالثة الذين يستخدمهم التطبيق:</p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">خدمات جوجل بلاي (Google Play Services)</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">جوجل أدموب (Google AdMob)</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" target="_blank">جوجل فايربيز (Google Firebase)</a></li>
-        </ul>
-
-        <h2>3. أمن البيانات</h2>
-        <p>نحن نقدر ثقتك في تزويدنا بمعلوماتك، ولذلك نسعى لاستخدام وسائل مقبولة تجارياً لحمايتها. ومع ذلك، تذكر أنه لا توجد طريقة نقل عبر الإنترنت أو طريقة تخزين إلكتروني آمنة بنسبة 100% وموثوقة، ولا يمكننا ضمان أمنها المطلق.</p>
-
-        <h2>4. خصوصية الأطفال</h2>
-        <p>هذه الخدمات لا تخاطب أي شخص يقل عمره عن 13 عامًا. نحن لا نجمع عن قصد معلومات تعريف شخصية من الأطفال دون سن 13 عامًا.</p>
-
-        <h2>5. التغييرات على سياسة الخصوصية هذه</h2>
-        <p>قد نقوم بتحديث سياسة الخصوصية الخاصة بنا من وقت لآخر. لذلك، ننصحك بمراجعة هذه الصفحة بشكل دوري لمعرفة أي تغييرات. سنقوم بإعلامك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة على هذه الصفحة.</p>
-
-        <h2>6. تواصل معنا</h2>
-        <p>إذا كان لديك أي أسئلة أو اقتراحات حول سياسة الخصوصية الخاصة بنا، فلا تتردد في الاتصال بنا على:<br>
-        <strong>البريد الإلكتروني:</strong> <a href="mailto:abdoh730262620@gmail.com">abdoh730262620@gmail.com</a></p>
+<div class="container">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchLanguage('ar')">العربية</button>
+        <button class="tab-btn" onclick="switchLanguage('en')">English</button>
     </div>
+
+    <!-- المحتوى العربي -->
+    <div id="content-ar" class="content active">
+        <h1>سياسة الخصوصية وحماية بيانات المستخدمين</h1>
+        <div class="last-update">آخر تحديث: يوليو 2026</div>
+        
+        <p>نحن نلتزم التزاماً مطلقاً بحماية خصوصيتك وأمن بياناتك. يوضح هذا المستند كيفية التعامل مع البيانات والصلاحيات داخل التطبيق لتكون على دراية كاملة بآلية العمل المتوافقة تماماً مع سياسات متجر Google Play وشبكة إعلانات AdMob وخدمات Firebase.</p>
+
+        <h2>1. جمع ومعالجة البيانات</h2>
+        <p><strong>التخزين المحلي الكلي:</strong> تخزن جميع بيانات الشبكة، وعناوين الأجهزة (IPs)، وعناوين الماك (MACs)، والأسماء، وبيانات الدخول المسجلة للأجهزة (الاسم وكلمة المرور) محلياً بالكامل على ذاكرة جهازك الشخصي باستخدام قاعدة بيانات مشفرة وآمنة. لا نقوم برفع هذه البيانات إلى أي خوادم خارجية خاصة بنا مطلقاً.</p>
+        <p><strong>تشفير كلمات المرور:</strong> يوفر التطبيق ميزة اختيارية لتشفير كلمات المرور محلياً وسحابياً لضمان أقصى درجات السرية والأمان.</p>
+        <p><strong>النسخ الاحتياطي السحابي (اختياري):</strong> عند تفعيلك لميزة المزامنة السحابية مع Google Drive، يتم رفع ملفات النسخ الاحتياطي مباشرة من جهازك إلى حساب Google Drive الخاص بك بشكل مشفر ومستقل تماماً. لا يمتلك أي طرف ثالث أو المطور أي وصول لهذه البيانات.</p>
+
+        <h2>2. الأذونات والصلاحيات المطلوبة</h2>
+        <p>يطلب التطبيق الأذونات التالية لتقديم وظائف حقيقية وأساسية للمستخدم:</p>
+        <ul>
+            <li><strong>صلاحية الإنترنت (INTERNET):</strong> تُستخدم لقياس جودة الاتصال وسرعة البنج (Ping) لخوادم DNS وأشهر المواقع العالمية، ولمزامنة النسخ الاحتياطية سحابياً مع حساب Google Drive الخاص بك، ولتحميل إعلانات AdMob وتحليلات Firebase.</li>
+            <li><strong>صلاحية حالة الشبكة (ACCESS_NETWORK_STATE):</strong> تُستخدم لمعرفة ما إذا كان جهازك متصلاً بشبكة الإنترنت أو شبكة Wi-Fi محلية، وللتحقق من البوابة الافتراضية (Gateway) لمعرفة عنوان IP الخاص بالراوتر.</li>
+            <li><strong>صلاحية المصادقة الحيوية وبصمة الإصبع (USE_BIOMETRIC):</strong> تُستخدم محلياً بالكامل لتأمين الدخول للتطبيق وحماية بيانات شبكتك الحساسة من الدخول غير المصرح به.</li>
+        </ul>
+
+        <h2>3. الخدمات الخارجية (الطرف الثالث)</h2>
+        <p>يتكامل التطبيق مع خدمات تابعة لشركة Google لضمان استمرارية التشغيل وتقديم الدعم الإعلاني وتحسين جودة الخدمة:</p>
+        <ul>
+            <li><strong>إعلانات Google AdMob:</strong> يستخدم التطبيق شبكة Google AdMob لعرض إعلانات البانر والإعلانات البينية لدعم المطور وتوفير التطبيق مجاناً. تلتزم الإعلانات بسياسة برنامج الناشرين وبنود خصوصية Google. قد تجمع الشبكة الإعلانية معرفات إعلانية مجهولة الهوية لتخصيص الإعلانات.</li>
+            <li><strong>خدمات Google Drive API:</strong> تُستخدم حصرياً لإرسال واستقبال ملفات الباك اب المشفرة الخاصة بالشبكة بشكل مباشر وآمن من وإلى مساحة التخزين الخاصة بك.</li>
+            <li><strong>خدمات Google Firebase:</strong> تُستخدم حصرياً لإرسال الإشعارات والتنبيهات الهامة وتجميع إحصائيات الاستخدام والتحليلات مجهولة الهوية لتشخيص الأخطاء وتحسين جودة التطبيق. لا يتم تجميع أو مشاركة أي من بيانات الشبكة أو البيانات الحساسة أو بيانات المستخدمين الخاصة خارج إطار التحليلات الفنية مجهولة الهوية.</li>
+        </ul>
+
+        <h2>4. التوافق مع سياسات Google Play</h2>
+        <ul>
+            <li>لا يحتوي التطبيق على أي برمجيات خبيثة أو أكواد تجسس.</li>
+            <li>لا يتم بيع، تأجير، أو مشاركة بيانات شبكتك الحساسة مع أي طرف ثالث.</li>
+            <li>التطبيق لا يجمع أي معلومات شخصية حساسة مثل الأسماء الحقيقية، العناوين السكنية، أو أرقام بطاقات الائتمان.</li>
+            <li>تلتزم الإعلانات المعروضة بالقوانين والأنظمة المعمول بها بما يمنع عرض إعلانات مضللة أو خادشة للحياء.</li>
+        </ul>
+
+        <h2>5. تعديل سياسة الخصوصية</h2>
+        <p>نحتفظ بالحق في تعديل سياسة الخصوصية هذه عند الحاجة لمواكبة التحديثات البرمجية أو سياسات Google Play. سيتم دائماً الإعلان عن أي تغيير داخل هذه النافذة بالتطبيق.</p>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en" class="content">
+        <h1>Privacy Policy & User Data Protection</h1>
+        <div class="last-update">Last Updated: July 2026</div>
+
+        <p>We are absolutely committed to protecting your privacy and securing your data. This document outlines how data and permissions are handled within the app, ensuring full compliance with Google Play Developer Policies, AdMob Advertising, and Google Firebase Services.</p>
+
+        <h2>1. Data Collection & Processing</h2>
+        <p><strong>100% Local Storage:</strong> All network configurations, IP addresses, MAC addresses, device names, and credentials (usernames and passwords) are saved entirely on your physical device in a secure, local encrypted database. We never upload this data to any external private servers.</p>
+        <p><strong>Credentials Encryption:</strong> The app provides an optional, advanced feature to encrypt your device credentials locally and cloud-wise for ultimate security and privacy.</p>
+        <p><strong>Cloud Backup (Optional):</strong> When you enable Google Drive Cloud Backup Sync, your backups are uploaded directly and securely from your device to your personal Google Drive storage. No third party, nor the developer, has any access to this data.</p>
+
+        <h2>2. Permissions Required</h2>
+        <p>The app requests only the minimum necessary permissions to perform real and essential functions for network management:</p>
+        <ul>
+            <li><strong>Internet Permission (INTERNET):</strong> Used to measure ping quality and real-time speed for global DNS and popular site servers, synchronize backups securely with Google Drive, and load Google AdMob advertisements and Firebase statistics.</li>
+            <li><strong>Network State (ACCESS_NETWORK_STATE):</strong> Used to identify connection states (Wi-Fi or Mobile Data) and detect the default gateway IP to identify the main router's address.</li>
+            <li><strong>Biometric Authentication (USE_BIOMETRIC):</strong> Used 100% locally on your device to lock the application and prevent unauthorized physical access to your sensitive network information.</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>The application integrates with official Google services to ensure seamless operation, error diagnostics, and advertising support:</p>
+        <ul>
+            <li><strong>Google AdMob Ads:</strong> We show Banner and Interstitial Ads to support the continuous development of this free tool. AdMob complies with the Google Publisher Policy. The ad network may collect anonymous advertising identifiers to show personalized ads. You can control or opt out of ad personalization in your Google account settings.</li>
+            <li><strong>Google Drive API Services:</strong> Used strictly to securely upload and download encrypted network backup files directly to your account.</li>
+            <li><strong>Google Firebase Services:</strong> Used exclusively for sending important push notifications and collecting anonymous usage statistics and diagnostics (such as crash logs) to improve app stability and quality. No network data, private credentials, or personal information is ever collected or shared outside this anonymous, diagnostic-only scope.</li>
+        </ul>
+
+        <h2>4. Google Play Policy Compliance</h2>
+        <ul>
+            <li>The app contains absolutely zero malware, spyware, or malicious code.</li>
+            <li>We never sell, rent, or share your sensitive network or personal data with third parties.</li>
+            <li>The app does not collect personal identity information such as real names, physical addresses, or financial/payment cards.</li>
+            <li>All displayed ads adhere strictly to rating standards, keeping them family-safe and fully compliant.</li>
+        </ul>
+
+        <h2>5. Changes to the Privacy Policy</h2>
+        <p>We reserve the right to update this privacy policy as necessary to align with app upgrades or Google Play guidelines. Any changes will be published transparently in this native dialog.</p>
+    </div>
+</div>
+
+<script>
+    function switchLanguage(lang) {
+        const contentAr = document.getElementById('content-ar');
+        const contentEn = document.getElementById('content-en');
+        const buttons = document.querySelectorAll('.tab-btn');
+        const container = document.querySelector('.container');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        if (lang === 'ar') {
+            contentAr.classList.add('active');
+            contentEn.classList.remove('active');
+            buttons[0].classList.add('active');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.documentElement.setAttribute('lang', 'ar');
+        } else {
+            contentAr.classList.remove('active');
+            contentEn.classList.add('active');
+            buttons[1].classList.add('active');
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.setAttribute('lang', 'en');
+        }
+    }
+</script>
 </body>
 </html>
