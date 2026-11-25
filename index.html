@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية | Privacy Policy</title>
+    <title>سياسة الخصوصية الموحدة | Unified Privacy Policy</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -31,11 +31,11 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--white);
             border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--border);
             overflow: hidden;
         }
@@ -55,7 +55,7 @@
             font-weight: 700;
             cursor: pointer;
             color: var(--secondary);
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             font-family: inherit;
         }
 
@@ -75,7 +75,7 @@
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             color: var(--primary);
             margin-bottom: 10px;
             font-weight: 800;
@@ -84,37 +84,57 @@
         .last-update {
             font-size: 14px;
             color: var(--secondary);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 15px;
+            padding-bottom: 14px;
+        }
+
+        .apps-box {
+            background: var(--primary-light);
+            border: 1px solid #c6dafc;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 24px;
+        }
+
+        .apps-box h3 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .apps-box ul {
+            margin-bottom: 0;
+        }
+
+        .apps-box li:last-child {
+            margin-bottom: 0;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 19px;
             color: var(--primary);
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 28px;
+            margin-bottom: 12px;
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         p, li {
-            font-size: 16px;
+            font-size: 15.5px;
             color: #3c4043;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         ul {
             list-style-type: none;
-            padding-right: 20px;
-            padding-left: 20px;
+            padding-inline-start: 22px;
+            margin-bottom: 14px;
         }
 
         li {
             position: relative;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         li::before {
@@ -123,22 +143,39 @@
             font-weight: bold;
             display: inline-block;
             width: 1em;
-            margin-right: -1em;
+            margin-inline-start: -1em;
         }
 
-        /* Responsive */
+        .contact-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-top: 16px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             body {
-                padding: 15px 10px;
+                padding: 14px 10px;
             }
             .content {
                 padding: 20px;
             }
             h1 {
-                font-size: 22px;
+                font-size: 21px;
             }
             h2 {
-                font-size: 18px;
+                font-size: 17px;
             }
         }
     </style>
@@ -153,82 +190,142 @@
 
     <!-- المحتوى العربي -->
     <div id="content-ar" class="content active">
-        <h1>سياسة الخصوصية وحماية بيانات المستخدمين</h1>
-        <div class="last-update">آخر تحديث: يوليو 2026</div>
-        
-        <p>نحن نلتزم التزاماً مطلقاً بحماية خصوصيتك وأمن بياناتك. يوضح هذا المستند كيفية التعامل مع البيانات والصلاحيات داخل التطبيق لتكون على دراية كاملة بآلية العمل المتوافقة تماماً مع سياسات متجر Google Play وشبكة إعلانات AdMob وخدمات Firebase.</p>
+        <h1>سياسة الخصوصية الموحدة وحماية بيانات المستخدمين</h1>
+        <div class="last-update">آخر تحديث: نوفمبر 2026 &nbsp;|&nbsp; المطوّر: أبو راشد للبرمجيات (Aburashed Apps)</div>
 
-        <h2>1. جمع ومعالجة البيانات</h2>
-        <p><strong>التخزين المحلي الكلي:</strong> تخزن جميع بيانات الشبكة، وعناوين الأجهزة (IPs)، وعناوين الماك (MACs)، والأسماء، وبيانات الدخول المسجلة للأجهزة (الاسم وكلمة المرور) محلياً بالكامل على ذاكرة جهازك الشخصي باستخدام قاعدة بيانات مشفرة وآمنة. لا نقوم برفع هذه البيانات إلى أي خوادم خارجية خاصة بنا مطلقاً.</p>
-        <p><strong>تشفير كلمات المرور:</strong> يوفر التطبيق ميزة اختيارية لتشفير كلمات المرور محلياً وسحابياً لضمان أقصى درجات السرية والأمان.</p>
-        <p><strong>النسخ الاحتياطي السحابي (اختياري):</strong> عند تفعيلك لميزة المزامنة السحابية مع Google Drive، يتم رفع ملفات النسخ الاحتياطي مباشرة من جهازك إلى حساب Google Drive الخاص بك بشكل مشفر ومستقل تماماً. لا يمتلك أي طرف ثالث أو المطور أي وصول لهذه البيانات.</p>
+        <p>نلتزم التزاماً كاملاً بحماية خصوصيتك وأمن بياناتك. تنطبق سياسة الخصوصية الموحدة هذه على جميع تطبيقات Android التي نطوّرها وننشرها على متجر Google Play، وتوضح بشفافية آلية جمع البيانات ومعالجتها والأذونات المستخدمة وفقاً لسياسات Google Play وخدمات Google Firebase وGoogle AdMob وGoogle Drive.</p>
+
+        <div class="apps-box">
+            <h3>التطبيقات المشمولة بهذه السياسة:</h3>
+            <ul>
+                <li><strong>إدارة حسابات الشبكة (النظام المحاسبي لمبيعات الشبكات):</strong> <code>com.aburashed.netcards.pro2</code></li>
+                <li><strong>تطبيقات إدارة وفحص الشبكات والراوترات والأجهزة:</strong> تطبيقاتنا السابقة الخاصة بإدارة الشبكات وعناوين الأجهزة (IP/MAC) وفحص الاتصال.</li>
+                <li><strong>جميع التطبيقات والأدوات المستقبلية:</strong> أي تطبيقات أخرى تُنشر تحت نفس حساب المطوّر وتشير إلى رابط سياسة الخصوصية هذا (وتُطبّق عليها البنود المتوافقة مع وظائف كل تطبيق).</li>
+            </ul>
+        </div>
+
+        <h2>1. جمع البيانات وتخزينها ومزامنتها</h2>
+        <p>تختلف أنواع البيانات المعالجة بحسب ميزات كل تطبيق والخدمات التي يختار المستخدم تفعيلها:</p>
+        <ul>
+            <li><strong>التخزين المحلي على الجهاز:</strong> يتم حفظ بيانات الشبكات، وعناوين الأجهزة (IP/MAC)، وإعدادات الراوتر أو MikroTik، والفواتير، والسندات، والمخزون، وبيانات الموزعين والعملاء محلياً داخل قاعدة بيانات آمنة على جهازك.</li>
+            <li><strong>بيانات الحساب والمصادقة (في التطبيقات الداعمة للحسابات):</strong> عند اختيارك تسجيل الدخول عبر حساب Google، يتم استخدام معلومات الحساب الأساسية (البريد الإلكتروني، الاسم المعروض، ومعرّف الحساب الفريد) حصرياً للتحقق من هويتك وإدارة صلاحيات المدير والموظفين والموزعين وربط الأجهزة بشكل آمن.</li>
+            <li><strong>المزامنة والنسخ الاحتياطي السحابي (اختياري):</strong>
+                في التطبيقات التي تدعم المزامنة السحابية عبر <strong>Firebase Cloud Firestore</strong>، يتم حفظ بيانات حسابك (مثل الفواتير، الإعدادات، الشعار، والتقارير) ضمن مساحة معزولة ومحمية بقواعد أمان صارمة ومشفّرة أثناء النقل (HTTPS/TLS). وفي التطبيقات التي تدعم النسخ الاحتياطي عبر <strong>Google Drive</strong>، تُرفع ملفات النسخ الاحتياطي المشفرة مباشرة إلى حساب Google Drive الشخصي الخاص بك دون أي وصول للمطور أو لطرف ثالث.
+            </li>
+            <li><strong>الصور والشعارات المختارة طوعياً:</strong> عند اختيارك لصورة (مثل شعار الشبكة لطباعته على الفواتير والتقارير)، نستخدم منتقي الصور الرسمي للنظام (Android Photo Picker) دون طلب صلاحية الوصول إلى كامل ملفات الجهاز.</li>
+            <li><strong>حماية كلمات المرور والرموز:</strong> توفر تطبيقاتنا خيارات لتشفير وحماية كلمات المرور ورموز الدخول، ولا نبيع أو نشارك بياناتك الحساسة مع أي طرف خارجي مطلقاً.</li>
+        </ul>
 
         <h2>2. الأذونات والصلاحيات المطلوبة</h2>
-        <p>يطلب التطبيق الأذونات التالية لتقديم وظائف حقيقية وأساسية للمستخدم:</p>
+        <p>يطلب كل تطبيق الحد الأدنى من الأذونات اللازمة لوظائفه الفعلية فقط (وقد لا تُطلب بعض الأذونات في التطبيقات التي لا تحتوي على الميزة المرتبطة بها):</p>
         <ul>
-            <li><strong>صلاحية الإنترنت (INTERNET):</strong> تُستخدم لقياس جودة الاتصال وسرعة البنج (Ping) لخوادم DNS وأشهر المواقع العالمية، ولمزامنة النسخ الاحتياطية سحابياً مع حساب Google Drive الخاص بك، ولتحميل إعلانات AdMob وتحليلات Firebase.</li>
-            <li><strong>صلاحية حالة الشبكة (ACCESS_NETWORK_STATE):</strong> تُستخدم لمعرفة ما إذا كان جهازك متصلاً بشبكة الإنترنت أو شبكة Wi-Fi محلية، وللتحقق من البوابة الافتراضية (Gateway) لمعرفة عنوان IP الخاص بالراوتر.</li>
-            <li><strong>صلاحية المصادقة الحيوية وبصمة الإصبع (USE_BIOMETRIC):</strong> تُستخدم محلياً بالكامل لتأمين الدخول للتطبيق وحماية بيانات شبكتك الحساسة من الدخول غير المصرح به.</li>
+            <li><strong>الإنترنت وحالة الشبكة (INTERNET / ACCESS_NETWORK_STATE):</strong> لفحص حالة الاتصال وسرعة البنج (Ping) واكتشاف البوابة الافتراضية (Gateway)، والاتصال بسيرفرات MikroTik، وإجراء المزامنة والنسخ الاحتياطي السحابي، وعرض الإعلانات أو إرسال التنبيهات.</li>
+            <li><strong>البلوتوث (BLUETOOTH / BLUETOOTH_CONNECT / BLUETOOTH_SCAN):</strong> يُستخدم في تطبيقات الفواتير والطباعة حصرياً للبحث عن الطابعات الحرارية (58mm / 80mm ESC/POS) والاتصال بها لطباعة الفواتير والإيصالات والكروت. لا يُستخدم إذن البلوتوث مطلقاً لتتبع موقعك الجغرافي.</li>
+            <li><strong>الإشعارات (POST_NOTIFICATIONS):</strong> لإرسال التنبيهات التشغيلية الهامة داخل التطبيق مثل تنبيهات التحويلات، انخفاض المخزون، أو تنبيهات النظام والمزامنة.</li>
+            <li><strong>المصادقة الحيوية وبصمة الإصبع (USE_BIOMETRIC / USE_FINGERPRINT):</strong> تُستخدم محلياً بالكامل على جهازك لقفل التطبيق وحماية بياناتك الحساسة من الدخول غير المصرح به.</li>
+            <li><strong>المشاركة والتصدير:</strong> عند قيامك بتصدير أو مشاركة فاتورة PDF أو تقرير أو نسخة احتياطية عبر تطبيقات مثل WhatsApp أو Telegram، يتم ذلك فقط بناءً على أمرك المباشر.</li>
         </ul>
 
-        <h2>3. الخدمات الخارجية (الطرف الثالث)</h2>
-        <p>يتكامل التطبيق مع خدمات تابعة لشركة Google لضمان استمرارية التشغيل وتقديم الدعم الإعلاني وتحسين جودة الخدمة:</p>
+        <h2>3. خدمات الطرف الثالث</h2>
+        <p>تتكامل بعض تطبيقاتنا مع خدمات رسمية تابعة لشركة Google وفق سياسات الخصوصية المعتمدة لديها:</p>
         <ul>
-            <li><strong>إعلانات Google AdMob:</strong> يستخدم التطبيق شبكة Google AdMob لعرض إعلانات البانر والإعلانات البينية لدعم المطور وتوفير التطبيق مجاناً. تلتزم الإعلانات بسياسة برنامج الناشرين وبنود خصوصية Google. قد تجمع الشبكة الإعلانية معرفات إعلانية مجهولة الهوية لتخصيص الإعلانات.</li>
-            <li><strong>خدمات Google Drive API:</strong> تُستخدم حصرياً لإرسال واستقبال ملفات الباك اب المشفرة الخاصة بالشبكة بشكل مباشر وآمن من وإلى مساحة التخزين الخاصة بك.</li>
-            <li><strong>خدمات Google Firebase:</strong> تُستخدم حصرياً لإرسال الإشعارات والتنبيهات الهامة وتجميع إحصائيات الاستخدام والتحليلات مجهولة الهوية لتشخيص الأخطاء وتحسين جودة التطبيق. لا يتم تجميع أو مشاركة أي من بيانات الشبكة أو البيانات الحساسة أو بيانات المستخدمين الخاصة خارج إطار التحليلات الفنية مجهولة الهوية.</li>
+            <li><strong>Google Firebase (Authentication / Firestore / App Check / Diagnostics):</strong> لتأمين تسجيل الدخول، ومزامنة البيانات السحابية للمستخدم، وحماية التطبيق من الوصول غير المصرح به، وتشخيص الأعطال الفنية لتحسين الاستقرار.</li>
+            <li><strong>Google AdMob:</strong> لعرض الإعلانات (بانر / بينية / بمكافأة) في التطبيقات المجانية لدعم التطوير المستمر. قد تستخدم Google معرفات الإعلانات وفق <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>، ويمكنك التحكم في تخصيص الإعلانات من إعدادات حسابك في Google.</li>
+            <li><strong>Google Drive API:</strong> تُستخدم حصرياً لرفع واستعادة ملفات النسخ الاحتياطي المشفرة من وإلى مساحة التخزين السحابية الشخصية للمستخدم.</li>
         </ul>
 
-        <h2>4. التوافق مع سياسات Google Play</h2>
+        <h2>4. الاحتفاظ بالبيانات وحذف الحساب والبيانات</h2>
+        <p>نحتفظ ببياناتك فقط طوال فترة استخدامك للتطبيق أو بقاء حسابك نشطاً. يمكنك في أي وقت:</p>
         <ul>
-            <li>لا يحتوي التطبيق على أي برمجيات خبيثة أو أكواد تجسس.</li>
-            <li>لا يتم بيع، تأجير، أو مشاركة بيانات شبكتك الحساسة مع أي طرف ثالث.</li>
-            <li>التطبيق لا يجمع أي معلومات شخصية حساسة مثل الأسماء الحقيقية، العناوين السكنية، أو أرقام بطاقات الائتمان.</li>
-            <li>تلتزم الإعلانات المعروضة بالقوانين والأنظمة المعمول بها بما يمنع عرض إعلانات مضللة أو خادشة للحياء.</li>
+            <li>حذف بياناتك المحلية مباشرة من داخل التطبيق أو عبر إلغاء تثبيت التطبيق.</li>
+            <li>حذف بياناتك السحابية أو حسابك المرتبط عبر خيارات حذف البيانات المتوفرة داخل التطبيق (إن وُجدت)، أو بإرسال طلب حذف دائم إلى بريد الدعم الفني الموضح أدناه، حيث تتم معالجة الطلب وحذف جميع البيانات المرتبطة بحسابك نهائياً خلال مدة أقصاها 30 يوماً.</li>
         </ul>
 
-        <h2>5. تعديل سياسة الخصوصية</h2>
-        <p>نحتفظ بالحق في تعديل سياسة الخصوصية هذه عند الحاجة لمواكبة التحديثات البرمجية أو سياسات Google Play. سيتم دائماً الإعلان عن أي تغيير داخل هذه النافذة بالتطبيق.</p>
+        <h2>5. خصوصية الأطفال</h2>
+        <p>جميع تطبيقاتنا مخصّصة لإدارة الشبكات والأعمال والمحاسبة وليست موجّهة للأطفال دون سن 13 عاماً، ولا نقوم عن قصد بجمع أي بيانات شخصية من الأطفال.</p>
+
+        <h2>6. التوافق مع سياسات Google Play والتعديلات</h2>
+        <ul>
+            <li>لا تحتوي تطبيقاتنا على أي برمجيات خبيثة أو أكواد تجسس.</li>
+            <li>لا نقوم ببيع أو تأجير أو المتاجرة ببيانات المستخدمين أو شبكاتهم أو حساباتهم لأي طرف ثالث.</li>
+            <li>نحتفظ بالحق في تحديث هذه السياسة عند إضافة تطبيقات أو ميزات جديدة، وسيتم تحديث تاريخ «آخر تحديث» أعلى الصفحة فور نشر أي تعديل.</li>
+        </ul>
+
+        <h2>7. تواصل معنا</h2>
+        <div class="contact-box">
+            <p style="margin-bottom: 6px;">لأي استفسار حول سياسة الخصوصية أو لتقديم طلب حذف حسابك وبياناتك، يمكنك التواصل معنا مباشرة عبر البريد الإلكتروني:</p>
+            <p style="margin-bottom: 0;"><strong>البريد الإلكتروني:</strong> <a href="mailto:habibtali1994@gmail.com">habibtali1994@gmail.com</a></p>
+        </div>
     </div>
 
     <!-- English Content -->
     <div id="content-en" class="content">
-        <h1>Privacy Policy & User Data Protection</h1>
-        <div class="last-update">Last Updated: July 2026</div>
+        <h1>Unified Privacy Policy &amp; User Data Protection</h1>
+        <div class="last-update">Last Updated: November 2026 &nbsp;|&nbsp; Developer: Aburashed Apps</div>
 
-        <p>We are absolutely committed to protecting your privacy and securing your data. This document outlines how data and permissions are handled within the app, ensuring full compliance with Google Play Developer Policies, AdMob Advertising, and Google Firebase Services.</p>
+        <p>We are fully committed to protecting your privacy and securing your data. This Unified Privacy Policy applies to all Android applications developed and published by us on Google Play and transparently explains how data, permissions, and third-party services are handled in compliance with Google Play Developer Policies, Google Firebase, Google AdMob, and Google Drive.</p>
 
-        <h2>1. Data Collection & Processing</h2>
-        <p><strong>100% Local Storage:</strong> All network configurations, IP addresses, MAC addresses, device names, and credentials (usernames and passwords) are saved entirely on your physical device in a secure, local encrypted database. We never upload this data to any external private servers.</p>
-        <p><strong>Credentials Encryption:</strong> The app provides an optional, advanced feature to encrypt your device credentials locally and cloud-wise for ultimate security and privacy.</p>
-        <p><strong>Cloud Backup (Optional):</strong> When you enable Google Drive Cloud Backup Sync, your backups are uploaded directly and securely from your device to your personal Google Drive storage. No third party, nor the developer, has any access to this data.</p>
+        <div class="apps-box">
+            <h3>Applications Covered by This Policy:</h3>
+            <ul>
+                <li><strong>Network Accounts Management (النظام المحاسبي لمبيعات الشبكات):</strong> <code>com.aburashed.netcards.pro2</code></li>
+                <li><strong>Network, Router &amp; Device Management Utilities:</strong> Our previous network management and diagnostics apps (IP/MAC management, router tools, ping &amp; encrypted backups).</li>
+                <li><strong>Future &amp; Additional Apps:</strong> Any additional applications published under the same developer account that link to this Privacy Policy (each app applies only the sections relevant to its features).</li>
+            </ul>
+        </div>
 
-        <h2>2. Permissions Required</h2>
-        <p>The app requests only the minimum necessary permissions to perform real and essential functions for network management:</p>
+        <h2>1. Data Collection, Storage &amp; Sync</h2>
+        <p>Depending on the features of each app and the options you choose to enable:</p>
         <ul>
-            <li><strong>Internet Permission (INTERNET):</strong> Used to measure ping quality and real-time speed for global DNS and popular site servers, synchronize backups securely with Google Drive, and load Google AdMob advertisements and Firebase statistics.</li>
-            <li><strong>Network State (ACCESS_NETWORK_STATE):</strong> Used to identify connection states (Wi-Fi or Mobile Data) and detect the default gateway IP to identify the main router's address.</li>
-            <li><strong>Biometric Authentication (USE_BIOMETRIC):</strong> Used 100% locally on your device to lock the application and prevent unauthorized physical access to your sensitive network information.</li>
+            <li><strong>Local On-Device Storage:</strong> Network records, IP/MAC addresses, router/MikroTik settings, invoices, vouchers, inventory, distributors, and preferences are stored locally in a secure database on your device.</li>
+            <li><strong>Account &amp; Authentication (for Account-Enabled Apps):</strong> When you choose to sign in with Google, we process basic account information (email address, display name, and unique user ID) solely to authenticate you, manage manager/employee/distributor roles, and link authorized devices securely.</li>
+            <li><strong>Cloud Sync &amp; Backup (Optional):</strong>
+                In apps supporting real-time sync via <strong>Firebase Cloud Firestore</strong>, your business/network data (such as invoices, settings, logos, and reports) is encrypted in transit (HTTPS/TLS) and stored in an isolated, access-controlled cloud workspace. In apps supporting <strong>Google Drive Backup</strong>, encrypted backup files are uploaded directly to your personal Google Drive account with zero access by the developer or third parties.
+            </li>
+            <li><strong>User-Selected Media (Logos/Images):</strong> When selecting an image (such as a network logo for invoices and reports), our apps use the privacy-preserving Android Photo Picker without requesting broad storage permissions.</li>
+            <li><strong>Credentials Security:</strong> Optional password/PIN encryption keeps your credentials protected; we never sell or disclose sensitive user credentials.</li>
+        </ul>
+
+        <h2>2. Permissions Used Across Covered Apps</h2>
+        <p>Each application requests only the minimal permissions required for its own active features:</p>
+        <ul>
+            <li><strong>Internet &amp; Network State (INTERNET / ACCESS_NETWORK_STATE):</strong> Used to verify connectivity, run ping/gateway checks, connect to MikroTik routers, synchronize or back up data, deliver notifications, and load ads where applicable.</li>
+            <li><strong>Bluetooth (BLUETOOTH / BLUETOOTH_CONNECT / BLUETOOTH_SCAN):</strong> Used exclusively in printing-enabled apps to discover and connect to Bluetooth thermal printers (58mm/80mm ESC/POS) for printing invoices, receipts, and vouchers. Bluetooth scanning is never used for location tracking.</li>
+            <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to deliver operational alerts such as custody transfers, low-stock warnings, or system/sync alerts.</li>
+            <li><strong>Biometric Authentication (USE_BIOMETRIC / USE_FINGERPRINT):</strong> Used 100% locally on your device to lock the app and prevent unauthorized physical access.</li>
+            <li><strong>Export &amp; Sharing:</strong> Exporting or sharing PDF invoices, reports, or backups via apps such as WhatsApp or Telegram happens strictly upon your explicit action.</li>
         </ul>
 
         <h2>3. Third-Party Services</h2>
-        <p>The application integrates with official Google services to ensure seamless operation, error diagnostics, and advertising support:</p>
+        <p>Depending on the specific app, we integrate with official Google services governed by Google's Privacy Policy:</p>
         <ul>
-            <li><strong>Google AdMob Ads:</strong> We show Banner and Interstitial Ads to support the continuous development of this free tool. AdMob complies with the Google Publisher Policy. The ad network may collect anonymous advertising identifiers to show personalized ads. You can control or opt out of ad personalization in your Google account settings.</li>
-            <li><strong>Google Drive API Services:</strong> Used strictly to securely upload and download encrypted network backup files directly to your account.</li>
-            <li><strong>Google Firebase Services:</strong> Used exclusively for sending important push notifications and collecting anonymous usage statistics and diagnostics (such as crash logs) to improve app stability and quality. No network data, private credentials, or personal information is ever collected or shared outside this anonymous, diagnostic-only scope.</li>
+            <li><strong>Google Firebase (Authentication, Cloud Firestore, App Check, Crash Diagnostics):</strong> Used for secure sign-in, private cloud sync, app integrity protection, and technical error diagnostics to improve reliability.</li>
+            <li><strong>Google AdMob:</strong> Used in ad-supported apps to display Banner, Interstitial, or Rewarded ads. AdMob may use advertising identifiers per the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can manage or opt out of ad personalization in your Google account settings.</li>
+            <li><strong>Google Drive API:</strong> Used strictly to upload and restore encrypted backup files directly to your personal Google Drive storage.</li>
         </ul>
 
-        <h2>4. Google Play Policy Compliance</h2>
+        <h2>4. Data Retention &amp; Account/Data Deletion</h2>
+        <p>We retain your data only for as long as you use the app or maintain an active account. At any time, you may:</p>
         <ul>
-            <li>The app contains absolutely zero malware, spyware, or malicious code.</li>
-            <li>We never sell, rent, or share your sensitive network or personal data with third parties.</li>
-            <li>The app does not collect personal identity information such as real names, physical addresses, or financial/payment cards.</li>
-            <li>All displayed ads adhere strictly to rating standards, keeping them family-safe and fully compliant.</li>
+            <li>Delete all locally stored data from within the app or by uninstalling the application.</li>
+            <li>Delete your cloud data or linked account using the in-app data/account deletion tools (where available), or submit a permanent deletion request by emailing us at the address below. All verified deletion requests are completed permanently within 30 days.</li>
         </ul>
 
-        <h2>5. Changes to the Privacy Policy</h2>
-        <p>We reserve the right to update this privacy policy as necessary to align with app upgrades or Google Play guidelines. Any changes will be published transparently in this native dialog.</p>
+        <h2>5. Children's Privacy</h2>
+        <p>Our applications are professional network and accounting utilities not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>6. Google Play Compliance &amp; Policy Updates</h2>
+        <ul>
+            <li>Our applications contain zero malware, spyware, or hidden tracking code.</li>
+            <li>We never sell, rent, or trade your personal, accounting, or network data to third parties.</li>
+            <li>We may update this Unified Privacy Policy when adding new apps or features; the "Last Updated" date at the top of this page will always reflect the latest revision.</li>
+        </ul>
+
+        <h2>7. Contact Us</h2>
+        <div class="contact-box">
+            <p style="margin-bottom: 6px;">If you have any questions about this Privacy Policy or wish to request deletion of your account and associated data, please contact us at:</p>
+            <p style="margin-bottom: 0;"><strong>Email:</strong> <a href="mailto:habibtali1994@gmail.com">habibtali1994@gmail.com</a></p>
+        </div>
     </div>
 </div>
 
@@ -237,7 +334,6 @@
         const contentAr = document.getElementById('content-ar');
         const contentEn = document.getElementById('content-en');
         const buttons = document.querySelectorAll('.tab-btn');
-        const container = document.querySelector('.container');
 
         buttons.forEach(btn => btn.classList.remove('active'));
 
