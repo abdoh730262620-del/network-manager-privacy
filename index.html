@@ -193,11 +193,12 @@
         <h1>سياسة الخصوصية الموحدة وحماية بيانات المستخدمين</h1>
         <div class="last-update">آخر تحديث: نوفمبر 2026 &nbsp;|&nbsp; المطوّر: أبو راشد للبرمجيات (Aburashed Apps)</div>
 
-        <p>نلتزم التزاماً كاملاً بحماية خصوصيتك وأمن بياناتك. تنطبق سياسة الخصوصية الموحدة هذه على جميع تطبيقات Android التي نطوّرها وننشرها على متجر Google Play، وتوضح بشفافية آلية جمع البيانات ومعالجتها والأذونات المستخدمة وفقاً لسياسات Google Play وخدمات Google Firebase وGoogle AdMob وGoogle Drive.</p>
+        <p>نلتزم التزاماً كاملاً بحماية خصوصيتك وأمن بياناتك. تنطبق سياسة الخصوصية الموحدة هذه على جميع تطبيقات Android التي نطوّرها وننشرها على متجر Google Play، وتوضح بشفافية آلية جمع البيانات ومعالجتها والأذونات المستخدمة وفقاً لسياسات Google Play وخدمات Google Firebase وGoogle AdMob وStart.io وGoogle Drive.</p>
 
         <div class="apps-box">
             <h3>التطبيقات المشمولة بهذه السياسة:</h3>
             <ul>
+                <li><strong>إدارة الحسابات والديون والمصروفات:</strong> <code>com.rashed.edaramany.arapp</code></li>
                 <li><strong>إدارة حسابات الشبكة (النظام المحاسبي لمبيعات الشبكات):</strong> <code>com.aburashed.netcards.pro2</code></li>
                 <li><strong>تطبيقات إدارة وفحص الشبكات والراوترات والأجهزة:</strong> تطبيقاتنا السابقة الخاصة بإدارة الشبكات وعناوين الأجهزة (IP/MAC) وفحص الاتصال.</li>
                 <li><strong>جميع التطبيقات والأدوات المستقبلية:</strong> أي تطبيقات أخرى تُنشر تحت نفس حساب المطوّر وتشير إلى رابط سياسة الخصوصية هذا (وتُطبّق عليها البنود المتوافقة مع وظائف كل تطبيق).</li>
@@ -207,47 +208,53 @@
         <h2>1. جمع البيانات وتخزينها ومزامنتها</h2>
         <p>تختلف أنواع البيانات المعالجة بحسب ميزات كل تطبيق والخدمات التي يختار المستخدم تفعيلها:</p>
         <ul>
-            <li><strong>التخزين المحلي على الجهاز:</strong> يتم حفظ بيانات الشبكات، وعناوين الأجهزة (IP/MAC)، وإعدادات الراوتر أو MikroTik، والفواتير، والسندات، والمخزون، وبيانات الموزعين والعملاء محلياً داخل قاعدة بيانات آمنة على جهازك.</li>
-            <li><strong>بيانات الحساب والمصادقة (في التطبيقات الداعمة للحسابات):</strong> عند اختيارك تسجيل الدخول عبر حساب Google، يتم استخدام معلومات الحساب الأساسية (البريد الإلكتروني، الاسم المعروض، ومعرّف الحساب الفريد) حصرياً للتحقق من هويتك وإدارة صلاحيات المدير والموظفين والموزعين وربط الأجهزة بشكل آمن.</li>
+            <li><strong>التخزين المحلي على الجهاز:</strong> يتم حفظ سجلات الحسابات والديون والمصروفات والعملاء والموردين والصندوق والبنوك والعملات (في تطبيق إدارة الحسابات والديون والمصروفات)، وكذلك بيانات الشبكات وعناوين الأجهزة (IP/MAC) وإعدادات الراوتر أو MikroTik والفواتير والسندات والمخزون والموزعين محلياً داخل قاعدة بيانات آمنة على جهازك.</li>
+            <li><strong>بيانات الحساب والبريد الإلكتروني والمصادقة (اختياري):</strong> عند اختيارك ربط حساب Google أو اختيار بريدك الإلكتروني لتفعيل المزامنة السحابية أو إدارة الترخيص أو تسجيل الدخول، تُستخدم معلومات الحساب الأساسية (البريد الإلكتروني، الاسم المعروض، ومعرّف الحساب الفريد) حصرياً للتحقق من هويتك وإدارة الصلاحيات والنسخ الاحتياطي وتفعيل التطبيق بشكل آمن.</li>
+            <li><strong>معرّفات الجهاز وأرقام التعريف الأخرى (Device &amp; App Identifiers):</strong> قد تستخدم تطبيقاتنا معرّف الجهاز الفريد (مثل <code>ANDROID_ID</code> أو معرّف جهاز عشوائي خاص بالتطبيق، ورمز الإشعارات السحابية FCM Token، ومعلومات الطراز والإصدار) عبر اتصال مشفّر (HTTPS/TLS) لأغراض التحقق من الترخيص والفترة التجريبية، وإرسال الإشعارات، ومنع إساءة الاستخدام، وتشخيص الأعطال، وعرض الإعلانات عبر شبكات الإعلان المعتمدة.</li>
             <li><strong>المزامنة والنسخ الاحتياطي السحابي (اختياري):</strong>
-                في التطبيقات التي تدعم المزامنة السحابية عبر <strong>Firebase Cloud Firestore</strong>، يتم حفظ بيانات حسابك (مثل الفواتير، الإعدادات، الشعار، والتقارير) ضمن مساحة معزولة ومحمية بقواعد أمان صارمة ومشفّرة أثناء النقل (HTTPS/TLS). وفي التطبيقات التي تدعم النسخ الاحتياطي عبر <strong>Google Drive</strong>، تُرفع ملفات النسخ الاحتياطي المشفرة مباشرة إلى حساب Google Drive الشخصي الخاص بك دون أي وصول للمطور أو لطرف ثالث.
+                في التطبيقات التي تدعم المزامنة السحابية عبر <strong>Firebase Cloud Firestore</strong>، يتم حفظ بيانات حسابك وسجلاتك أو إعداداتك ضمن مساحة محمية بقواعد أمان صارمة ومشفّرة أثناء النقل (HTTPS/TLS). وفي التطبيقات التي تدعم النسخ الاحتياطي عبر <strong>Google Drive</strong>، تُرفع ملفات النسخ الاحتياطي المشفرة مباشرة إلى حساب Google Drive الشخصي الخاص بك دون أي وصول للمطور أو لطرف ثالث.
             </li>
-            <li><strong>الصور والشعارات المختارة طوعياً:</strong> عند اختيارك لصورة (مثل شعار الشبكة لطباعته على الفواتير والتقارير)، نستخدم منتقي الصور الرسمي للنظام (Android Photo Picker) دون طلب صلاحية الوصول إلى كامل ملفات الجهاز.</li>
-            <li><strong>حماية كلمات المرور والرموز:</strong> توفر تطبيقاتنا خيارات لتشفير وحماية كلمات المرور ورموز الدخول، ولا نبيع أو نشارك بياناتك الحساسة مع أي طرف خارجي مطلقاً.</li>
+            <li><strong>الاستيراد الاختياري من جهات الاتصال:</strong> في تطبيق إدارة الحسابات والديون والمصروفات، عند اختيارك استيراد رقم هاتف عميل أو مورد يدوياً، يُقرأ فقط الاسم ورقم الهاتف الذي تختاره لإضافته إلى سجلك المحلي، ولا يتم مطلقاً رفع أو مشاركة قائمة جهات اتصالك مع أي خادم أو جهة خارجية.</li>
+            <li><strong>الصور والشعارات المختارة طوعياً:</strong> عند اختيارك لصورة (مثل شعار المؤسسة أو الشبكة لطباعته على الفواتير والتقارير)، نستخدم منتقي الصور الرسمي للنظام (Android Photo Picker) دون طلب صلاحية الوصول إلى كامل ملفات الجهاز.</li>
+            <li><strong>حماية كلمات المرور والرموز:</strong> توفر تطبيقاتنا خيارات لتشفير وحماية كلمات المرور ورموز الدخول (PIN)، ولا نبيع أو نؤجر بياناتك الشخصية أو المالية مع أي طرف خارجي مطلقاً.</li>
         </ul>
 
         <h2>2. الأذونات والصلاحيات المطلوبة</h2>
         <p>يطلب كل تطبيق الحد الأدنى من الأذونات اللازمة لوظائفه الفعلية فقط (وقد لا تُطلب بعض الأذونات في التطبيقات التي لا تحتوي على الميزة المرتبطة بها):</p>
         <ul>
-            <li><strong>الإنترنت وحالة الشبكة (INTERNET / ACCESS_NETWORK_STATE):</strong> لفحص حالة الاتصال وسرعة البنج (Ping) واكتشاف البوابة الافتراضية (Gateway)، والاتصال بسيرفرات MikroTik، وإجراء المزامنة والنسخ الاحتياطي السحابي، وعرض الإعلانات أو إرسال التنبيهات.</li>
+            <li><strong>الإنترنت وحالة الشبكة (INTERNET / ACCESS_NETWORK_STATE):</strong> لفحص حالة الاتصال وسرعة البنج (Ping)، الاتصال بسيرفرات MikroTik، التحقق من الترخيص، تحديث أسعار صرف العملات، إجراء المزامنة والنسخ الاحتياطي السحابي، إرسال الإشعارات، وعرض الإعلانات.</li>
+            <li><strong>جهات الاتصال (READ_CONTACTS - اختياري):</strong> يُستخدم حصرياً عند ضغطك على زر اختيار جهة اتصال لإدخال اسم ورقم عميل أو مورد بسهولة داخل تطبيق إدارة الحسابات والديون.</li>
+            <li><strong>الحسابات على الجهاز (GET_ACCOUNTS - اختياري):</strong> يُستخدم لتسهيل اختيار بريدك الإلكتروني عند طلب تفعيل الترخيص أو ربط النسخ الاحتياطي السحابي.</li>
             <li><strong>البلوتوث (BLUETOOTH / BLUETOOTH_CONNECT / BLUETOOTH_SCAN):</strong> يُستخدم في تطبيقات الفواتير والطباعة حصرياً للبحث عن الطابعات الحرارية (58mm / 80mm ESC/POS) والاتصال بها لطباعة الفواتير والإيصالات والكروت. لا يُستخدم إذن البلوتوث مطلقاً لتتبع موقعك الجغرافي.</li>
-            <li><strong>الإشعارات (POST_NOTIFICATIONS):</strong> لإرسال التنبيهات التشغيلية الهامة داخل التطبيق مثل تنبيهات التحويلات، انخفاض المخزون، أو تنبيهات النظام والمزامنة.</li>
-            <li><strong>المصادقة الحيوية وبصمة الإصبع (USE_BIOMETRIC / USE_FINGERPRINT):</strong> تُستخدم محلياً بالكامل على جهازك لقفل التطبيق وحماية بياناتك الحساسة من الدخول غير المصرح به.</li>
-            <li><strong>المشاركة والتصدير:</strong> عند قيامك بتصدير أو مشاركة فاتورة PDF أو تقرير أو نسخة احتياطية عبر تطبيقات مثل WhatsApp أو Telegram، يتم ذلك فقط بناءً على أمرك المباشر.</li>
+            <li><strong>الإشعارات والتنبيهات المجدولة (POST_NOTIFICATIONS / SCHEDULE_EXACT_ALARM / WAKE_LOCK):</strong> لإرسال التنبيهات التشغيلية الهامة مثل تنبيهات استحقاق الديون والحد الائتماني، التحويلات، انخفاض المخزون، أو تنبيهات النظام والمزامنة في وقتها المحدد.</li>
+            <li><strong>المصادقة الحيوية وبصمة الإصبع (USE_BIOMETRIC / USE_FINGERPRINT):</strong> تُستخدم محلياً بالكامل على جهازك لقفل التطبيق وحماية بياناتك المالية والشخصية من الدخول غير المصرح به.</li>
+            <li><strong>المشاركة والتصدير:</strong> عند قيامك بتصدير أو مشاركة فاتورة PDF أو ملف Excel أو تقرير أو نسخة احتياطية عبر تطبيقات مثل WhatsApp أو Telegram أو البريد الإلكتروني، يتم ذلك فقط بناءً على أمرك المباشر.</li>
         </ul>
 
         <h2>3. خدمات الطرف الثالث</h2>
-        <p>تتكامل بعض تطبيقاتنا مع خدمات رسمية تابعة لشركة Google وفق سياسات الخصوصية المعتمدة لديها:</p>
+        <p>تتكامل تطبيقاتنا مع خدمات رسمية ومعتمدة وفق سياسات الخصوصية الخاصة بكل مزود:</p>
         <ul>
-            <li><strong>Google Firebase (Authentication / Firestore / App Check / Diagnostics):</strong> لتأمين تسجيل الدخول، ومزامنة البيانات السحابية للمستخدم، وحماية التطبيق من الوصول غير المصرح به، وتشخيص الأعطال الفنية لتحسين الاستقرار.</li>
-            <li><strong>Google AdMob:</strong> لعرض الإعلانات (بانر / بينية / بمكافأة) في التطبيقات المجانية لدعم التطوير المستمر. قد تستخدم Google معرفات الإعلانات وفق <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>، ويمكنك التحكم في تخصيص الإعلانات من إعدادات حسابك في Google.</li>
-            <li><strong>Google Drive API:</strong> تُستخدم حصرياً لرفع واستعادة ملفات النسخ الاحتياطي المشفرة من وإلى مساحة التخزين السحابية الشخصية للمستخدم.</li>
+            <li><strong>Google Firebase (Authentication / Cloud Firestore / Cloud Messaging / App Check / Diagnostics):</strong> لتأمين تسجيل الدخول، ومزامنة البيانات السحابية وإعدادات التطبيق، وإرسال الإشعارات، وحماية التطبيق من الوصول غير المصرح به، وتشخيص الأعطال الفنية لتحسين الاستقرار.</li>
+            <li><strong>Google AdMob:</strong> لعرض الإعلانات (بانر / بينية / بمكافأة / فتح التطبيق) في التطبيقات المدعومة بالإعلانات. قد تجمع Google وتشارك معرّفات الإعلانات وبيانات التفاعل مع الإعلانات وفق <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>، ويمكنك التحكم في تخصيص الإعلانات من إعدادات حسابك في Google.</li>
+            <li><strong>Start.io (StartApp):</strong> قد تُستخدم شبكة Start.io لعرض الإعلانات (بانر / بينية / بمكافأة) داخل بعض التطبيقات، وقد تجمع معرّفات الجهاز والإعلانات وبيانات التشخيص وفق <a href="https://www.startio.com/policy/privacy-policy/" target="_blank" rel="noopener">سياسة خصوصية Start.io</a>.</li>
+            <li><strong>Google Drive API:</strong> تُستخدم حصرياً في التطبيقات الداعمة لها لرفع واستعادة ملفات النسخ الاحتياطي المشفرة من وإلى مساحة التخزين السحابية الشخصية للمستخدم.</li>
+            <li><strong>خدمة أسعار الصرف (Open Exchange Rates API):</strong> تُستخدم عند طلبك تحديث أسعار صرف العملات في تطبيق المحاسبة دون إرسال أي بيانات شخصية.</li>
         </ul>
 
         <h2>4. الاحتفاظ بالبيانات وحذف الحساب والبيانات</h2>
-        <p>نحتفظ ببياناتك فقط طوال فترة استخدامك للتطبيق أو بقاء حسابك نشطاً. يمكنك في أي وقت:</p>
+        <p>نحتفظ ببياناتك فقط طوال فترة استخدامك للتطبيق أو بقاء حسابك أو ترخيصك نشطاً. يمكنك في أي وقت:</p>
         <ul>
-            <li>حذف بياناتك المحلية مباشرة من داخل التطبيق أو عبر إلغاء تثبيت التطبيق.</li>
-            <li>حذف بياناتك السحابية أو حسابك المرتبط عبر خيارات حذف البيانات المتوفرة داخل التطبيق (إن وُجدت)، أو بإرسال طلب حذف دائم إلى بريد الدعم الفني الموضح أدناه، حيث تتم معالجة الطلب وحذف جميع البيانات المرتبطة بحسابك نهائياً خلال مدة أقصاها 30 يوماً.</li>
+            <li>حذف بياناتك المحلية مباشرة من داخل التطبيق (مثل تصفير السجلات أو حذف المعاملات) أو عبر إلغاء تثبيت التطبيق.</li>
+            <li>حذف بياناتك السحابية أو حسابك أو سجل جهازك المرتبط عبر خيارات حذف البيانات المتوفرة داخل التطبيق (إن وُجدت)، أو بإرسال طلب حذف دائم إلى بريد الدعم الفني الموضح أدناه، حيث تتم معالجة الطلب وحذف جميع البيانات المرتبطة بحسابك نهائياً خلال مدة أقصاها 30 يوماً.</li>
         </ul>
 
         <h2>5. خصوصية الأطفال</h2>
-        <p>جميع تطبيقاتنا مخصّصة لإدارة الشبكات والأعمال والمحاسبة وليست موجّهة للأطفال دون سن 13 عاماً، ولا نقوم عن قصد بجمع أي بيانات شخصية من الأطفال.</p>
+        <p>جميع تطبيقاتنا مخصّصة لإدارة الحسابات والديون والشبكات والأعمال وليست موجّهة للأطفال دون سن 13 عاماً، ولا نقوم عن قصد بجمع أي بيانات شخصية من الأطفال.</p>
 
         <h2>6. التوافق مع سياسات Google Play والتعديلات</h2>
         <ul>
             <li>لا تحتوي تطبيقاتنا على أي برمجيات خبيثة أو أكواد تجسس.</li>
-            <li>لا نقوم ببيع أو تأجير أو المتاجرة ببيانات المستخدمين أو شبكاتهم أو حساباتهم لأي طرف ثالث.</li>
+            <li>لا نقوم ببيع أو تأجير أو المتاجرة ببيانات المستخدمين أو سجلاتهم المالية أو شبكاتهم لأي طرف ثالث.</li>
             <li>نحتفظ بالحق في تحديث هذه السياسة عند إضافة تطبيقات أو ميزات جديدة، وسيتم تحديث تاريخ «آخر تحديث» أعلى الصفحة فور نشر أي تعديل.</li>
         </ul>
 
@@ -263,11 +270,12 @@
         <h1>Unified Privacy Policy &amp; User Data Protection</h1>
         <div class="last-update">Last Updated: November 2026 &nbsp;|&nbsp; Developer: Aburashed Apps</div>
 
-        <p>We are fully committed to protecting your privacy and securing your data. This Unified Privacy Policy applies to all Android applications developed and published by us on Google Play and transparently explains how data, permissions, and third-party services are handled in compliance with Google Play Developer Policies, Google Firebase, Google AdMob, and Google Drive.</p>
+        <p>We are fully committed to protecting your privacy and securing your data. This Unified Privacy Policy applies to all Android applications developed and published by us on Google Play and transparently explains how data, permissions, and third-party services are handled in compliance with Google Play Developer Policies, Google Firebase, Google AdMob, Start.io, and Google Drive.</p>
 
         <div class="apps-box">
             <h3>Applications Covered by This Policy:</h3>
             <ul>
+                <li><strong>Accounts, Debts &amp; Expenses Manager (إدارة الحسابات والديون والمصروفات):</strong> <code>com.rashed.edaramany.arapp</code></li>
                 <li><strong>Network Accounts Management (النظام المحاسبي لمبيعات الشبكات):</strong> <code>com.aburashed.netcards.pro2</code></li>
                 <li><strong>Network, Router &amp; Device Management Utilities:</strong> Our previous network management and diagnostics apps (IP/MAC management, router tools, ping &amp; encrypted backups).</li>
                 <li><strong>Future &amp; Additional Apps:</strong> Any additional applications published under the same developer account that link to this Privacy Policy (each app applies only the sections relevant to its features).</li>
@@ -277,47 +285,53 @@
         <h2>1. Data Collection, Storage &amp; Sync</h2>
         <p>Depending on the features of each app and the options you choose to enable:</p>
         <ul>
-            <li><strong>Local On-Device Storage:</strong> Network records, IP/MAC addresses, router/MikroTik settings, invoices, vouchers, inventory, distributors, and preferences are stored locally in a secure database on your device.</li>
-            <li><strong>Account &amp; Authentication (for Account-Enabled Apps):</strong> When you choose to sign in with Google, we process basic account information (email address, display name, and unique user ID) solely to authenticate you, manage manager/employee/distributor roles, and link authorized devices securely.</li>
+            <li><strong>Local On-Device Storage:</strong> Accounting records, customer and supplier ledgers, debts/credits, expenses, cash funds, banks, currencies, custom labels, as well as network records, IP/MAC addresses, router/MikroTik settings, invoices, vouchers, inventory, and distributors are stored locally in a secure database on your device.</li>
+            <li><strong>Account, Email &amp; Authentication (Optional):</strong> When you choose to sign in with Google or link your email address for cloud backup/sync or license activation, basic account information (email address, display name, and unique user ID) is processed solely to authenticate you, manage roles/permissions, and secure your backups and license.</li>
+            <li><strong>Device &amp; Other Identifiers:</strong> Our apps may transmit device/app identifiers (such as <code>ANDROID_ID</code> or an app-scoped device ID, Firebase Cloud Messaging token, device model, and app version) over encrypted HTTPS/TLS connections strictly for license/trial verification, delivering push notifications, fraud/abuse prevention, crash diagnostics, and displaying ads through supported ad networks.</li>
             <li><strong>Cloud Sync &amp; Backup (Optional):</strong>
-                In apps supporting real-time sync via <strong>Firebase Cloud Firestore</strong>, your business/network data (such as invoices, settings, logos, and reports) is encrypted in transit (HTTPS/TLS) and stored in an isolated, access-controlled cloud workspace. In apps supporting <strong>Google Drive Backup</strong>, encrypted backup files are uploaded directly to your personal Google Drive account with zero access by the developer or third parties.
+                In apps supporting real-time sync via <strong>Firebase Cloud Firestore</strong>, your business/accounting or network data (such as records, settings, logos, and reports) is encrypted in transit (HTTPS/TLS) and stored in an access-controlled cloud workspace. In apps supporting <strong>Google Drive Backup</strong>, encrypted backup files are uploaded directly to your personal Google Drive account with zero access by the developer or third parties.
             </li>
-            <li><strong>User-Selected Media (Logos/Images):</strong> When selecting an image (such as a network logo for invoices and reports), our apps use the privacy-preserving Android Photo Picker without requesting broad storage permissions.</li>
-            <li><strong>Credentials Security:</strong> Optional password/PIN encryption keeps your credentials protected; we never sell or disclose sensitive user credentials.</li>
+            <li><strong>Optional Contact Selection:</strong> In the Accounts, Debts &amp; Expenses Manager app, when you voluntarily pick a contact to populate a customer or supplier record, only the specific contact name and phone number you select are stored locally; your full address book is never uploaded or shared.</li>
+            <li><strong>User-Selected Media (Logos/Images):</strong> When selecting an image (such as a business or network logo for invoices and reports), our apps use the privacy-preserving Android Photo Picker without requesting broad storage permissions.</li>
+            <li><strong>Credentials Security:</strong> Optional password/PIN encryption keeps your credentials protected; we never sell or disclose sensitive user credentials or financial data.</li>
         </ul>
 
         <h2>2. Permissions Used Across Covered Apps</h2>
         <p>Each application requests only the minimal permissions required for its own active features:</p>
         <ul>
-            <li><strong>Internet &amp; Network State (INTERNET / ACCESS_NETWORK_STATE):</strong> Used to verify connectivity, run ping/gateway checks, connect to MikroTik routers, synchronize or back up data, deliver notifications, and load ads where applicable.</li>
+            <li><strong>Internet &amp; Network State (INTERNET / ACCESS_NETWORK_STATE):</strong> Used to verify connectivity, run ping/gateway checks, connect to MikroTik routers, verify app licenses, refresh currency exchange rates, synchronize or back up data, deliver notifications, and load ads where applicable.</li>
+            <li><strong>Contacts (READ_CONTACTS - Optional):</strong> Used exclusively when you tap to import a customer's or supplier's name and phone number into your local accounting ledger.</li>
+            <li><strong>Device Accounts (GET_ACCOUNTS - Optional):</strong> Used optionally to help pre-fill or select your email address for cloud sync or license registration.</li>
             <li><strong>Bluetooth (BLUETOOTH / BLUETOOTH_CONNECT / BLUETOOTH_SCAN):</strong> Used exclusively in printing-enabled apps to discover and connect to Bluetooth thermal printers (58mm/80mm ESC/POS) for printing invoices, receipts, and vouchers. Bluetooth scanning is never used for location tracking.</li>
-            <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to deliver operational alerts such as custody transfers, low-stock warnings, or system/sync alerts.</li>
+            <li><strong>Notifications &amp; Scheduled Alarms (POST_NOTIFICATIONS / SCHEDULE_EXACT_ALARM / WAKE_LOCK):</strong> Used to deliver timely operational alerts such as debt/credit due reminders, custody transfers, low-stock warnings, or system/sync alerts.</li>
             <li><strong>Biometric Authentication (USE_BIOMETRIC / USE_FINGERPRINT):</strong> Used 100% locally on your device to lock the app and prevent unauthorized physical access.</li>
-            <li><strong>Export &amp; Sharing:</strong> Exporting or sharing PDF invoices, reports, or backups via apps such as WhatsApp or Telegram happens strictly upon your explicit action.</li>
+            <li><strong>Export &amp; Sharing:</strong> Exporting or sharing PDF invoices, Excel sheets, reports, or backups via apps such as WhatsApp, Telegram, or email happens strictly upon your explicit action.</li>
         </ul>
 
         <h2>3. Third-Party Services</h2>
-        <p>Depending on the specific app, we integrate with official Google services governed by Google's Privacy Policy:</p>
+        <p>Depending on the specific app, we integrate with official third-party services governed by their respective privacy policies:</p>
         <ul>
-            <li><strong>Google Firebase (Authentication, Cloud Firestore, App Check, Crash Diagnostics):</strong> Used for secure sign-in, private cloud sync, app integrity protection, and technical error diagnostics to improve reliability.</li>
-            <li><strong>Google AdMob:</strong> Used in ad-supported apps to display Banner, Interstitial, or Rewarded ads. AdMob may use advertising identifiers per the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can manage or opt out of ad personalization in your Google account settings.</li>
-            <li><strong>Google Drive API:</strong> Used strictly to upload and restore encrypted backup files directly to your personal Google Drive storage.</li>
+            <li><strong>Google Firebase (Authentication, Cloud Firestore, Cloud Messaging, App Check, Diagnostics):</strong> Used for secure sign-in, cloud sync/configuration, push notifications, app integrity protection, and technical diagnostics to improve reliability.</li>
+            <li><strong>Google AdMob:</strong> Used in ad-supported apps to display Banner, Interstitial, Rewarded, or App Open ads. AdMob may collect and share advertising/device identifiers and ad interaction data per the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can manage or opt out of ad personalization in your Google account settings.</li>
+            <li><strong>Start.io (StartApp):</strong> Used in ad-supported apps to display Banner, Interstitial, or Rewarded ads. Start.io may collect device/advertising identifiers and technical signals in accordance with the <a href="https://www.startio.com/policy/privacy-policy/" target="_blank" rel="noopener">Start.io Privacy Policy</a>.</li>
+            <li><strong>Google Drive API:</strong> Used strictly in Drive-enabled apps to upload and restore encrypted backup files directly to your personal Google Drive storage.</li>
+            <li><strong>Currency Exchange Rates API (Open ER API):</strong> Used upon request in the accounting app to fetch public currency exchange rates; no personal data is transmitted.</li>
         </ul>
 
         <h2>4. Data Retention &amp; Account/Data Deletion</h2>
-        <p>We retain your data only for as long as you use the app or maintain an active account. At any time, you may:</p>
+        <p>We retain your data only for as long as you use the app or maintain an active account/license. At any time, you may:</p>
         <ul>
             <li>Delete all locally stored data from within the app or by uninstalling the application.</li>
-            <li>Delete your cloud data or linked account using the in-app data/account deletion tools (where available), or submit a permanent deletion request by emailing us at the address below. All verified deletion requests are completed permanently within 30 days.</li>
+            <li>Delete your cloud data, device license record, or linked account using the in-app data/account deletion tools (where available), or submit a permanent deletion request by emailing us at the address below. All verified deletion requests are completed permanently within 30 days.</li>
         </ul>
 
         <h2>5. Children's Privacy</h2>
-        <p>Our applications are professional network and accounting utilities not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+        <p>Our applications are professional accounting, debt management, and network utilities not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
 
         <h2>6. Google Play Compliance &amp; Policy Updates</h2>
         <ul>
             <li>Our applications contain zero malware, spyware, or hidden tracking code.</li>
-            <li>We never sell, rent, or trade your personal, accounting, or network data to third parties.</li>
+            <li>We never sell, rent, or trade your personal, financial, accounting, or network data to third parties.</li>
             <li>We may update this Unified Privacy Policy when adding new apps or features; the "Last Updated" date at the top of this page will always reflect the latest revision.</li>
         </ul>
 
